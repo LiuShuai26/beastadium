@@ -1,0 +1,6 @@
+Project:
+  Name: Ironone
+  StartScene: SampleScene.beast
+  AssetDirectory: "Assets"
+  ScriptPath: "Assets/Scripts"
+  ScenePath: "Assets/Scenes"

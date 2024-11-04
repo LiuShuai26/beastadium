@@ -14,3 +14,11 @@ register(
     max_episode_steps=3000,
     reward_threshold=100,
 )
+
+register(
+    id="IronEnv",
+    entry_point="beastadium.iron_env.iron_env:IronEnv",
+    max_episode_steps=3000,
+    reward_threshold=100,
+)
+

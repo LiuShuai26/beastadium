@@ -3,8 +3,9 @@ import numpy as np
 import gymnasium as gym
 import beastadium
 
+env = gym.make("IronEnv")
 # env = gym.make("ShipEnv")
-env = gym.make("SimpleCat")
+# env = gym.make("SimpleCat")
 
 print(env.observation_space)
 print(env.action_space)
