@@ -100,7 +100,7 @@ Entities:
     TagComponent:
       Tag: Ground
     TransformComponent:
-      Translation: [0, -3, 0]
+      Translation: [0, -6, 0]
       Rotation: [0, 0, 0]
       Scale: [13, 1, 1]
     SpriteRendererComponent:
