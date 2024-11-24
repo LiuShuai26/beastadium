@@ -15,7 +15,7 @@ class StarEnv(gym.Env):
             np.array([-1, -1]).astype(np.float32),
             np.array([1, 1]).astype(np.float32),
         )
-        self.observation_space = spaces.Box(-np.inf, np.inf, shape=(16,))
+        self.observation_space = spaces.Box(-np.inf, np.inf, shape=(17,))
 
     def step(self, action):
         action = np.clip(action, -1, +1).astype(np.float32)
