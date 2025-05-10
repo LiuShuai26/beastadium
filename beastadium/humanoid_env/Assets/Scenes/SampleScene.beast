@@ -83,7 +83,7 @@ Entities:
       enableLimit: true
       maxMotorTorque: 0
       motorSpeed: 0
-      enableMotor: false
+      enableMotor: true
       dampingRatio: 1
       collideConnected: false
   - Entity: 6699163262000165994
@@ -107,7 +107,7 @@ Entities:
       enableLimit: true
       maxMotorTorque: 0
       motorSpeed: 0
-      enableMotor: false
+      enableMotor: true
       dampingRatio: 1
       collideConnected: false
   - Entity: 14799756664098478086
@@ -131,7 +131,7 @@ Entities:
       enableLimit: true
       maxMotorTorque: 0
       motorSpeed: 0
-      enableMotor: false
+      enableMotor: true
       dampingRatio: 1
       collideConnected: false
   - Entity: 4586164604264065781
@@ -155,7 +155,7 @@ Entities:
       enableLimit: true
       maxMotorTorque: 0
       motorSpeed: 0
-      enableMotor: false
+      enableMotor: true
       dampingRatio: 1
       collideConnected: false
   - Entity: 8414672226727352351
@@ -179,7 +179,7 @@ Entities:
       enableLimit: true
       maxMotorTorque: 0
       motorSpeed: 0
-      enableMotor: false
+      enableMotor: true
       dampingRatio: 1
       collideConnected: false
   - Entity: 7718928546007307161
@@ -203,7 +203,7 @@ Entities:
       enableLimit: true
       maxMotorTorque: 0
       motorSpeed: 0
-      enableMotor: false
+      enableMotor: true
       dampingRatio: 1
       collideConnected: false
   - Entity: 17316147827019031182
@@ -227,7 +227,7 @@ Entities:
       enableLimit: true
       maxMotorTorque: 0
       motorSpeed: 0
-      enableMotor: false
+      enableMotor: true
       dampingRatio: 1
       collideConnected: false
   - Entity: 7604253429573710126
@@ -251,7 +251,7 @@ Entities:
       enableLimit: true
       maxMotorTorque: 0
       motorSpeed: 0
-      enableMotor: false
+      enableMotor: true
       dampingRatio: 1
       collideConnected: false
   - Entity: 18145408807326521548
@@ -275,7 +275,7 @@ Entities:
       enableLimit: true
       maxMotorTorque: 0
       motorSpeed: 0
-      enableMotor: false
+      enableMotor: true
       dampingRatio: 1
       collideConnected: false
   - Entity: 16584353549265866901
@@ -299,7 +299,7 @@ Entities:
       enableLimit: true
       maxMotorTorque: 0
       motorSpeed: 0
-      enableMotor: false
+      enableMotor: true
       dampingRatio: 1
       collideConnected: false
   - Entity: 15665530559552959903
