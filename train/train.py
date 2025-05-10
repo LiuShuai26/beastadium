@@ -28,6 +28,7 @@ def register_custom_components():
     register_env("IronEnv", make_gym_env_func)
     register_env("ShipEnv", make_gym_env_func)
     register_env("SimpleCat", make_gym_env_func)
+    register_env("HumanoidEnv", make_gym_env_func)
 
 
 def parse_custom_args(argv=None, evaluation=False):

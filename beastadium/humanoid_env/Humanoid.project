@@ -1,0 +1,6 @@
+Project:
+  Name: Humanoid
+  StartScene: "Assets/Scenes/SampleScene.beast"
+  AssetDirectory: Assets
+  ScriptPath: Assets/Scripts
+  ScenePath: ""

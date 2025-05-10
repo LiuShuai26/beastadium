@@ -29,3 +29,9 @@ register(
     reward_threshold=100,
 )
 
+register(
+    id="HumanoidE",
+    entry_point="beastadium.humanoid_env.humanoid_env:HumanoidE",
+    max_episode_steps=3000,
+    reward_threshold=100,
+)
