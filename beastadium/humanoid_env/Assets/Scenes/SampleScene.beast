@@ -731,8 +731,8 @@ Entities:
     ScriptComponent:
       scriptPath: Brain.cpp
     AgentComponent:
-      mode: Heuristic
-      model_path: ""
+      mode: Inference
+      model_path: /Users/shuai/CLionProjects/Beast/Projects/Humanoid/Assets/Models/cat_traced_model.pt
   - Entity: 2980125013936406836
     TagComponent:
       Tag: box
@@ -799,15 +799,15 @@ Entities:
     TagComponent:
       Tag: Ground
     TransformComponent:
-      position: [0, 0, 0]
+      position: [9000, 0, 0]
       rotation: [0, 0, 0]
       scale: [1, 1, 1]
-      localPosition: [0, 0, 0]
+      localPosition: [9000, 0, 0]
       localRotation: [0, 0, 0]
       localScale: [1, 1, 1]
     SpriteRendererComponent:
       Color: [1, 1, 1, 1]
-      Size: [2000, 100, 1]
+      Size: [20000, 100, 1]
       RenderLayer: 0
     Rigidbody2DComponent:
       BodyType: Static
@@ -816,7 +816,7 @@ Entities:
     BoxCollider2DComponent:
       Shapes:
         - Offset: [0, 0]
-          Size: [2000, 100]
+          Size: [20000, 100]
           Radius: 0.5
           Density: 1
           Friction: 0.5
