@@ -544,7 +544,7 @@ Entities:
           Size: [7, 24]
           Radius: 0.5
           Density: 1
-          Friction: 0.5
+          Friction: 1.0
           Restitution: 0
           RestitutionThreshold: 0.5
           categoryBits: 2
@@ -640,7 +640,7 @@ Entities:
           Size: [7, 24]
           Radius: 0.5
           Density: 1
-          Friction: 0.5
+          Friction: 1.0
           Restitution: 0
           RestitutionThreshold: 0.5
           categoryBits: 2
@@ -737,10 +737,10 @@ Entities:
     TagComponent:
       Tag: box
     TransformComponent:
-      position: [-108.249878, 100, 0]
+      position: [-408.249878, 100, 0]
       rotation: [0, 0, 0]
       scale: [1, 1, 1]
-      localPosition: [-108.249878, 100, 0]
+      localPosition: [-408.249878, 100, 0]
       localRotation: [0, 0, 0]
       localScale: [1, 1, 1]
     SpriteRendererComponent:
@@ -819,7 +819,7 @@ Entities:
           Size: [20000, 100]
           Radius: 0.5
           Density: 1
-          Friction: 0.5
+          Friction: 1.0
           Restitution: 0
           RestitutionThreshold: 0.5
           categoryBits: 1

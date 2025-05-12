@@ -12,7 +12,7 @@ class HumanoidE(gym.Env):
 
         # Define action and observation space
         self.action_space = spaces.Box(-1, 1, shape=(10,))
-        self.observation_space = spaces.Box(-np.inf, np.inf, shape=(74,))
+        self.observation_space = spaces.Box(-np.inf, np.inf, shape=(84,))
 
     def step(self, action):
         action = np.clip(action, -1, +1).astype(np.float32)

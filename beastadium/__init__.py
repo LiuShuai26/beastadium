@@ -33,5 +33,5 @@ register(
     id="HumanoidE",
     entry_point="beastadium.humanoid_env.humanoid_env:HumanoidE",
     max_episode_steps=2000,
-    reward_threshold=100,
+    reward_threshold=3000,
 )
