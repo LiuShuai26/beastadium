@@ -13,7 +13,7 @@ def main():  # pragma: no cover
     """Script entry point."""
     register_custom_components()
     cfg = parse_custom_args(evaluation=True)
-    status = save(cfg, 74, 1024)
+    status = save(cfg, 84, 1024)
     return status
 
 

@@ -270,7 +270,7 @@ Entities:
       idA: 16304959792365445785
       idB: 4032828957078586892
       anchor: [0, 0]
-      lowerAngle: 0
+      lowerAngle: -0.52359879
       upperAngle: 2.53072739
       enableLimit: true
       maxMotorTorque: 0
@@ -294,7 +294,7 @@ Entities:
       idA: 16304959792365445785
       idB: 9145828424225607664
       anchor: [0, 0]
-      lowerAngle: 0
+      lowerAngle: -0.52359879
       upperAngle: 2.53072739
       enableLimit: true
       maxMotorTorque: 0
@@ -544,7 +544,7 @@ Entities:
           Size: [7, 24]
           Radius: 0.5
           Density: 1
-          Friction: 1.0
+          Friction: 1
           Restitution: 0
           RestitutionThreshold: 0.5
           categoryBits: 2
@@ -640,7 +640,7 @@ Entities:
           Size: [7, 24]
           Radius: 0.5
           Density: 1
-          Friction: 1.0
+          Friction: 1
           Restitution: 0
           RestitutionThreshold: 0.5
           categoryBits: 2
@@ -703,7 +703,7 @@ Entities:
         - Offset: [0, 0]
           Size: [15, 65]
           Radius: 0.5
-          Density: 1
+          Density: 1.5
           Friction: 0.5
           Restitution: 0
           RestitutionThreshold: 0.5
@@ -737,16 +737,16 @@ Entities:
     TagComponent:
       Tag: box
     TransformComponent:
-      position: [-408.249878, 100, 0]
+      position: [-450.500519, 100, 0]
       rotation: [0, 0, 0]
       scale: [1, 1, 1]
-      localPosition: [-408.249878, 100, 0]
+      localPosition: [-450.500519, 100, 0]
       localRotation: [0, 0, 0]
       localScale: [1, 1, 1]
     SpriteRendererComponent:
       Color: [0.753846169, 0.241230771, 0.241230771, 1]
       Size: [100, 100, 1]
-      RenderLayer: 0
+      RenderLayer: 2
     Rigidbody2DComponent:
       BodyType: Dynamic
       FixedRotation: false
@@ -767,16 +767,16 @@ Entities:
     TagComponent:
       Tag: Craft
     TransformComponent:
-      position: [-241.99794, 130.250153, 0]
+      position: [-216.497986, 119.750122, 0]
       rotation: [0, 0, 0]
-      scale: [0.159999996, 0.159999996, 1]
-      localPosition: [-241.99794, 130.250153, 0]
+      scale: [0.239999995, 0.219999999, 1]
+      localPosition: [-216.497986, 119.750122, 0]
       localRotation: [0, 0, 0]
-      localScale: [0.159999996, 0.159999996, 1]
+      localScale: [0.239999995, 0.219999999, 1]
     SpriteRendererComponent:
       Color: [1, 1, 1, 1]
       Size: [956, 1564, 1]
-      RenderLayer: 0
+      RenderLayer: 2
   - Entity: 9958375328014660809
     TagComponent:
       Tag: Main Camera
@@ -806,7 +806,7 @@ Entities:
       localRotation: [0, 0, 0]
       localScale: [1, 1, 1]
     SpriteRendererComponent:
-      Color: [1, 1, 1, 1]
+      Color: [0.603076935, 0.603076935, 0.603076935, 1]
       Size: [20000, 100, 1]
       RenderLayer: 0
     Rigidbody2DComponent:
@@ -819,9 +819,39 @@ Entities:
           Size: [20000, 100]
           Radius: 0.5
           Density: 1
-          Friction: 1.0
+          Friction: 1
           Restitution: 0
           RestitutionThreshold: 0.5
           categoryBits: 1
           maskBits: 65535
           isSensor: false
+  - Entity: 11962727047548841414
+    TagComponent:
+      Tag: Background1
+    TransformComponent:
+      position: [0, 348.749939, 0]
+      rotation: [0, 0, 0]
+      scale: [1.25, 1.25, 1]
+      localPosition: [0, 348.749939, 0]
+      localRotation: [0, 0, 0]
+      localScale: [1.25, 1.25, 1]
+    SpriteRendererComponent:
+      Color: [1, 1, 1, 1]
+      Size: [1280, 800, 1]
+      TexturePath: /Users/shuai/CLionProjects/Beast/Projects/Humanoid/Assets/Textures/grid.png
+      RenderLayer: 0
+  - Entity: 17489410220557255579
+    TagComponent:
+      Tag: Background2
+    TransformComponent:
+      position: [1600, 348.749939, 0]
+      rotation: [0, 0, 0]
+      scale: [1.25, 1.25, 1]
+      localPosition: [1600, 348.749939, 0]
+      localRotation: [0, 0, 0]
+      localScale: [1.25, 1.25, 1]
+    SpriteRendererComponent:
+      Color: [1, 1, 1, 1]
+      Size: [1280, 800, 1]
+      TexturePath: /Users/shuai/CLionProjects/Beast/Projects/Humanoid/Assets/Textures/grid.png
+      RenderLayer: 0
