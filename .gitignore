@@ -1,7 +1,8 @@
 
-
-
+.idea/
+build/
 train_dir
 
 *egg-info
 *.so
+checkpoint_p0

@@ -1,346 +1,195 @@
 Scene: Untitled
 Entities:
-  - Entity: 16633063266217956886
+  - Entity: 17489410220557255579
     TagComponent:
-      Tag: legs
-    ParentComponent:
-      Id: 12518404902098134090
+      Tag: Background2
+    TransformComponent:
+      position: [1600, 348.749939, 0]
+      rotation: [0, 0, 0]
+      scale: [1.25, 1.25, 1]
+      localPosition: [1600, 348.749939, 0]
+      localRotation: [0, 0, 0]
+      localScale: [1.25, 1.25, 1]
+    SpriteRendererComponent:
+      Color: [1, 1, 1, 1]
+      Size: [1280, 800, 1]
+      RenderLayer: 0
+  - Entity: 11962727047548841414
+    TagComponent:
+      Tag: Background1
+    TransformComponent:
+      position: [0, 348.749939, 0]
+      rotation: [0, 0, 0]
+      scale: [1.25, 1.25, 1]
+      localPosition: [0, 348.749939, 0]
+      localRotation: [0, 0, 0]
+      localScale: [1.25, 1.25, 1]
+    SpriteRendererComponent:
+      Color: [1, 1, 1, 1]
+      Size: [1280, 800, 1]
+      RenderLayer: 0
+  - Entity: 13161537779091593687
+    TagComponent:
+      Tag: Ground
+    TransformComponent:
+      position: [9000, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      localPosition: [9000, 0, 0]
+      localRotation: [0, 0, 0]
+      localScale: [1, 1, 1]
+    SpriteRendererComponent:
+      Color: [0.603076935, 0.603076935, 0.603076935, 1]
+      Size: [20000, 100, 1]
+      RenderLayer: 0
+    Rigidbody2DComponent:
+      BodyType: Static
+      FixedRotation: false
+      GravityScale: 1
+    BoxCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [20000, 100]
+          Radius: 0.5
+          Density: 1
+          Friction: 1
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 1
+          maskBits: 65535
+          isSensor: false
+  - Entity: 9958375328014660809
+    TagComponent:
+      Tag: Main Camera
+    TransformComponent:
+      position: [0, 214.999969, 1]
+      rotation: [0, 0, 0]
+      scale: [0.5, 0.5, 1]
+      localPosition: [0, 214.999969, 1]
+      localRotation: [0, 0, 0]
+      localScale: [0.5, 0.5, 1]
+    CameraComponent:
+      Camera:
+        ProjectionType: 0
+        OrthographicSize: 10
+        OrthographicNear: -1
+        OrthographicFar: 1
+      Primary: true
+      FixedAspectRatio: false
+  - Entity: 16140779475400854577
+    TagComponent:
+      Tag: Craft
+    TransformComponent:
+      position: [-216.497986, 119.750122, 0]
+      rotation: [0, 0, 0]
+      scale: [0.239999995, 0.219999999, 1]
+      localPosition: [-216.497986, 119.750122, 0]
+      localRotation: [0, 0, 0]
+      localScale: [0.239999995, 0.219999999, 1]
+    SpriteRendererComponent:
+      Color: [1, 1, 1, 1]
+      Size: [956, 1564, 1]
+      RenderLayer: 2
+  - Entity: 2980125013936406836
+    TagComponent:
+      Tag: box
+    TransformComponent:
+      position: [-450.500519, 100, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      localPosition: [-450.500519, 100, 0]
+      localRotation: [0, 0, 0]
+      localScale: [1, 1, 1]
+    SpriteRendererComponent:
+      Color: [0.753846169, 0.241230771, 0.241230771, 1]
+      Size: [100, 100, 1]
+      RenderLayer: 2
+    Rigidbody2DComponent:
+      BodyType: Dynamic
+      FixedRotation: false
+      GravityScale: 1
+    BoxCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [100, 100]
+          Radius: 0.5
+          Density: 1
+          Friction: 0.5
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 1
+          maskBits: 65535
+          isSensor: false
+  - Entity: 12518404902098134090
+    TagComponent:
+      Tag: Robot
     ChildrenComponent:
       Ids:
-        - 9145828424225607664
-        - 3434334283518123949
-        - 6720842966022138186
-        - 4032828957078586892
-        - 7546683351215964148
-        - 11990410239272650524
+        - 16304959792365445785
+        - 5313877712536831436
+        - 15665530559552959903
+        - 11013301190148018689
+        - 5725558020934028564
+        - 16633063266217956886
     TransformComponent:
       position: [0, 0, 0]
-      rotation: [0, -0, 0]
+      rotation: [0, 0, 0]
       scale: [1, 1, 1]
       localPosition: [0, 0, 0]
-      localRotation: [0, -0, 0]
+      localRotation: [0, 0, 0]
       localScale: [1, 1, 1]
-  - Entity: 5725558020934028564
+    ScriptComponent:
+      scriptPath: Brain.cpp
+    AgentComponent:
+      mode: Heuristic
+      model_path: /Users/shuai/CLionProjects/Beast/Projects/Humanoid/Assets/Models/cat_traced_model.pt
+  - Entity: 16304959792365445785
     TagComponent:
-      Tag: joints
-    ParentComponent:
-      Id: 12518404902098134090
-    ChildrenComponent:
-      Ids:
-        - 8706492868070233133
-        - 6699163262000165994
-        - 14799756664098478086
-        - 4586164604264065781
-        - 8414672226727352351
-        - 7718928546007307161
-        - 17316147827019031182
-        - 7604253429573710126
-        - 18145408807326521548
-        - 16584353549265866901
-    TransformComponent:
-      position: [0, 0, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 0, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-  - Entity: 11013301190148018689
-    TagComponent:
-      Tag: arms
-    ParentComponent:
-      Id: 12518404902098134090
-    ChildrenComponent:
-      Ids:
-        - 13293471284892532375
-        - 4566179642471549864
-        - 1321869254889086296
-        - 5004667654791399322
-    TransformComponent:
-      position: [0, 0, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 0, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-  - Entity: 8706492868070233133
-    TagComponent:
-      Tag: left_elbow
-    ParentComponent:
-      Id: 5725558020934028564
-    TransformComponent:
-      position: [0, 190, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 190, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    RevoluteJoint:
-      idA: 4566179642471549864
-      idB: 13293471284892532375
-      anchor: [0, 0]
-      lowerAngle: 0
-      upperAngle: 2.96705961
-      enableLimit: true
-      maxMotorTorque: 0
-      motorSpeed: 0
-      enableMotor: true
-      dampingRatio: 1
-      collideConnected: false
-  - Entity: 6699163262000165994
-    TagComponent:
-      Tag: left_shoulder
-    ParentComponent:
-      Id: 5725558020934028564
-    TransformComponent:
-      position: [0, 232.5, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 232.5, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    RevoluteJoint:
-      idA: 16304959792365445785
-      idB: 4566179642471549864
-      anchor: [0, 0]
-      lowerAngle: -0.52359879
-      upperAngle: 2.96705961
-      enableLimit: true
-      maxMotorTorque: 0
-      motorSpeed: 0
-      enableMotor: true
-      dampingRatio: 1
-      collideConnected: false
-  - Entity: 14799756664098478086
-    TagComponent:
-      Tag: right_elbow
-    ParentComponent:
-      Id: 5725558020934028564
-    TransformComponent:
-      position: [0, 190, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 190, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    RevoluteJoint:
-      idA: 5004667654791399322
-      idB: 1321869254889086296
-      anchor: [0, 0]
-      lowerAngle: 0
-      upperAngle: 2.96705961
-      enableLimit: true
-      maxMotorTorque: 0
-      motorSpeed: 0
-      enableMotor: true
-      dampingRatio: 1
-      collideConnected: false
-  - Entity: 4586164604264065781
-    TagComponent:
-      Tag: right_shoulder
-    ParentComponent:
-      Id: 5725558020934028564
-    TransformComponent:
-      position: [0, 232.5, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 232.5, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    RevoluteJoint:
-      idA: 16304959792365445785
-      idB: 5004667654791399322
-      anchor: [0, 0]
-      lowerAngle: -0.52359879
-      upperAngle: 2.96705961
-      enableLimit: true
-      maxMotorTorque: 0
-      motorSpeed: 0
-      enableMotor: true
-      dampingRatio: 1
-      collideConnected: false
-  - Entity: 8414672226727352351
-    TagComponent:
-      Tag: right_ankle
-    ParentComponent:
-      Id: 5725558020934028564
-    TransformComponent:
-      position: [0, 65.5, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 65.5, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    RevoluteJoint:
-      idA: 3434334283518123949
-      idB: 11990410239272650524
-      anchor: [0, 0]
-      lowerAngle: 0.610865235
-      upperAngle: 2.79252672
-      enableLimit: true
-      maxMotorTorque: 0
-      motorSpeed: 0
-      enableMotor: true
-      dampingRatio: 1
-      collideConnected: false
-  - Entity: 7718928546007307161
-    TagComponent:
-      Tag: left_ankle
-    ParentComponent:
-      Id: 5725558020934028564
-    TransformComponent:
-      position: [0, 65.5, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 65.5, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    RevoluteJoint:
-      idA: 6720842966022138186
-      idB: 7546683351215964148
-      anchor: [0, 0]
-      lowerAngle: 0.610865235
-      upperAngle: 2.79252672
-      enableLimit: true
-      maxMotorTorque: 0
-      motorSpeed: 0
-      enableMotor: true
-      dampingRatio: 1
-      collideConnected: false
-  - Entity: 17316147827019031182
-    TagComponent:
-      Tag: right_knee
-    ParentComponent:
-      Id: 5725558020934028564
-    TransformComponent:
-      position: [0, 122, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 122, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    RevoluteJoint:
-      idA: 4032828957078586892
-      idB: 3434334283518123949
-      anchor: [0, 0]
-      lowerAngle: -2.96705961
-      upperAngle: 0
-      enableLimit: true
-      maxMotorTorque: 0
-      motorSpeed: 0
-      enableMotor: true
-      dampingRatio: 1
-      collideConnected: false
-  - Entity: 7604253429573710126
-    TagComponent:
-      Tag: left_knee
-    ParentComponent:
-      Id: 5725558020934028564
-    TransformComponent:
-      position: [0, 122, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 122, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    RevoluteJoint:
-      idA: 9145828424225607664
-      idB: 6720842966022138186
-      anchor: [0, 0]
-      lowerAngle: -2.96705961
-      upperAngle: 0
-      enableLimit: true
-      maxMotorTorque: 0
-      motorSpeed: 0
-      enableMotor: true
-      dampingRatio: 1
-      collideConnected: false
-  - Entity: 18145408807326521548
-    TagComponent:
-      Tag: right_hip
-    ParentComponent:
-      Id: 5725558020934028564
-    TransformComponent:
-      position: [0, 170, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 170, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    RevoluteJoint:
-      idA: 16304959792365445785
-      idB: 4032828957078586892
-      anchor: [0, 0]
-      lowerAngle: -0.52359879
-      upperAngle: 2.53072739
-      enableLimit: true
-      maxMotorTorque: 0
-      motorSpeed: 0
-      enableMotor: true
-      dampingRatio: 1
-      collideConnected: false
-  - Entity: 16584353549265866901
-    TagComponent:
-      Tag: left_hip
-    ParentComponent:
-      Id: 5725558020934028564
-    TransformComponent:
-      position: [0, 170, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 170, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    RevoluteJoint:
-      idA: 16304959792365445785
-      idB: 9145828424225607664
-      anchor: [0, 0]
-      lowerAngle: -0.52359879
-      upperAngle: 2.53072739
-      enableLimit: true
-      maxMotorTorque: 0
-      motorSpeed: 0
-      enableMotor: true
-      dampingRatio: 1
-      collideConnected: false
-  - Entity: 15665530559552959903
-    TagComponent:
-      Tag: neck
+      Tag: body
     ParentComponent:
       Id: 12518404902098134090
     TransformComponent:
-      position: [0, 233.499985, 0]
+      position: [0, 200, 0]
       rotation: [0, -0, 0]
       scale: [1, 1, 1]
-      localPosition: [0, 233.499985, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    RevoluteJoint:
-      idA: 5313877712536831436
-      idB: 16304959792365445785
-      anchor: [0, 0]
-      lowerAngle: 0
-      upperAngle: 0
-      enableLimit: true
-      maxMotorTorque: 0
-      motorSpeed: 0
-      enableMotor: false
-      dampingRatio: 1
-      collideConnected: false
-  - Entity: 5313877712536831436
-    TagComponent:
-      Tag: head
-    ParentComponent:
-      Id: 12518404902098134090
-    TransformComponent:
-      position: [0, 245, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 245, 0]
+      localPosition: [0, 200, 0]
       localRotation: [0, -0, 0]
       localScale: [1, 1, 1]
     SpriteRendererComponent:
-      Color: [0.952941179, 0.34117648, 0.360784322, 0.898039222]
-      Size: [14, 21, 1]
+      Color: [0.572549045, 0.792156875, 1, 0.70588237]
+      Size: [15, 65, 1]
+      RenderLayer: 6
+    Rigidbody2DComponent:
+      BodyType: Dynamic
+      FixedRotation: false
+      GravityScale: 1
+    BoxCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [15, 65]
+          Radius: 0.5
+          Density: 1
+          Friction: 0.5
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 2
+          maskBits: 65533
+          isSensor: false
+  - Entity: 4032828957078586892
+    TagComponent:
+      Tag: right_upper_leg
+    ParentComponent:
+      Id: 16633063266217956886
+    TransformComponent:
+      position: [0, 147, 0]
+      rotation: [0, -0, 0]
+      scale: [0.99999994, 0.999999762, 1]
+      localPosition: [0, 147, 0]
+      localRotation: [0, -0, 0]
+      localScale: [0.99999994, 0.999999762, 1]
+    SpriteRendererComponent:
+      Color: [1, 1, 1, 0.717647076]
+      Size: [12, 54, 1]
       RenderLayer: 10
     Rigidbody2DComponent:
       BodyType: Dynamic
@@ -349,7 +198,7 @@ Entities:
     BoxCollider2DComponent:
       Shapes:
         - Offset: [0, 0]
-          Size: [14, 21]
+          Size: [12, 54]
           Radius: 0.5
           Density: 1
           Friction: 0.5
@@ -358,21 +207,53 @@ Entities:
           categoryBits: 2
           maskBits: 65533
           isSensor: false
-  - Entity: 13293471284892532375
+  - Entity: 11990410239272650524
     TagComponent:
-      Tag: left_lower_arm
+      Tag: right_foot
     ParentComponent:
-      Id: 11013301190148018689
+      Id: 16633063266217956886
     TransformComponent:
-      position: [0, 170, 0]
-      rotation: [0, -0, 0]
-      scale: [0.99999994, 0.99999994, 1]
-      localPosition: [0, 170, 0]
-      localRotation: [0, -0, 0]
+      position: [7.5, 62, 0]
+      rotation: [0, -0, 1.57079625]
+      scale: [0.999999881, 0.999999881, 1]
+      localPosition: [7.5, 62, 0]
+      localRotation: [0, -0, 1.57079637]
       localScale: [0.99999994, 0.99999994, 1]
     SpriteRendererComponent:
-      Color: [1, 0.733333349, 0.733333349, 0.356862754]
-      Size: [7, 45, 1]
+      Color: [1, 1, 1, 0.717647076]
+      Size: [7, 24, 1]
+      RenderLayer: 10
+    Rigidbody2DComponent:
+      BodyType: Dynamic
+      FixedRotation: false
+      GravityScale: 1
+    BoxCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [7, 24]
+          Radius: 0.5
+          Density: 1
+          Friction: 1
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 2
+          maskBits: 65533
+          isSensor: false
+  - Entity: 6720842966022138186
+    TagComponent:
+      Tag: left_lower_leg
+    ParentComponent:
+      Id: 16633063266217956886
+    TransformComponent:
+      position: [0, 95, 0]
+      rotation: [0, -0, 0]
+      scale: [0.999994695, 0.999994695, 1]
+      localPosition: [0, 95, 0]
+      localRotation: [0, -0, 0]
+      localScale: [0.999994695, 0.999994695, 1]
+    SpriteRendererComponent:
+      Color: [0.535384655, 0.535384655, 0.535384655, 0.717647076]
+      Size: [9, 58.9000015, 1]
       RenderLayer: 5
     Rigidbody2DComponent:
       BodyType: Dynamic
@@ -381,7 +262,7 @@ Entities:
     BoxCollider2DComponent:
       Shapes:
         - Offset: [0, 0]
-          Size: [7, 45]
+          Size: [9, 58.9000015]
           Radius: 0.5
           Density: 1
           Friction: 0.5
@@ -390,22 +271,118 @@ Entities:
           categoryBits: 2
           maskBits: 65533
           isSensor: false
-  - Entity: 4566179642471549864
+  - Entity: 3434334283518123949
     TagComponent:
-      Tag: left_upper_arm
+      Tag: right_lower_leg
+    ParentComponent:
+      Id: 16633063266217956886
+    TransformComponent:
+      position: [0, 95, 0]
+      rotation: [0, -0, 0]
+      scale: [0.99999994, 0.99999994, 1]
+      localPosition: [0, 95, 0]
+      localRotation: [0, -0, 0]
+      localScale: [0.99999994, 0.99999994, 1]
+    SpriteRendererComponent:
+      Color: [1, 1, 1, 0.717647076]
+      Size: [9, 58.9000015, 1]
+      RenderLayer: 10
+    Rigidbody2DComponent:
+      BodyType: Dynamic
+      FixedRotation: false
+      GravityScale: 1
+    BoxCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [9, 58.9000015]
+          Radius: 0.5
+          Density: 1
+          Friction: 0.5
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 2
+          maskBits: 65533
+          isSensor: false
+  - Entity: 7546683351215964148
+    TagComponent:
+      Tag: left_foot
+    ParentComponent:
+      Id: 16633063266217956886
+    TransformComponent:
+      position: [7.50000477, 62, 0]
+      rotation: [0, -0, 1.57079625]
+      scale: [0.999999523, 0.999999523, 1]
+      localPosition: [7.50000477, 62, 0]
+      localRotation: [0, -0, 1.57079637]
+      localScale: [0.999999583, 0.999999583, 1]
+    SpriteRendererComponent:
+      Color: [0.666666687, 0.666666687, 0.666666687, 0.70588237]
+      Size: [7, 24, 1]
+      RenderLayer: 5
+    Rigidbody2DComponent:
+      BodyType: Dynamic
+      FixedRotation: false
+      GravityScale: 1
+    BoxCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [7, 24]
+          Radius: 0.5
+          Density: 1
+          Friction: 1
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 2
+          maskBits: 65533
+          isSensor: false
+  - Entity: 9145828424225607664
+    TagComponent:
+      Tag: left_upper_leg
+    ParentComponent:
+      Id: 16633063266217956886
+    TransformComponent:
+      position: [0, 147, 0]
+      rotation: [0, -0, 0]
+      scale: [0.999996543, 0.999996424, 1]
+      localPosition: [0, 147, 0]
+      localRotation: [0, -0, 0]
+      localScale: [0.999996543, 0.999996424, 1]
+    SpriteRendererComponent:
+      Color: [0.683076918, 0.683076918, 0.683076918, 0.717647076]
+      Size: [12, 54, 1]
+      RenderLayer: 5
+    Rigidbody2DComponent:
+      BodyType: Dynamic
+      FixedRotation: false
+      GravityScale: 1
+    BoxCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [12, 54]
+          Radius: 0.5
+          Density: 1
+          Friction: 0.5
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 2
+          maskBits: 65533
+          isSensor: false
+  - Entity: 5004667654791399322
+    TagComponent:
+      Tag: right_upper_arm
     ParentComponent:
       Id: 11013301190148018689
     TransformComponent:
       position: [0, 210, 0]
       rotation: [0, -0, 0]
-      scale: [1, 1, 1]
+      scale: [0.999999881, 1, 1]
       localPosition: [0, 210, 0]
       localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
+      localScale: [0.999999881, 1, 1]
     SpriteRendererComponent:
-      Color: [0.996078432, 0.286274523, 0.286274523, 0.450980395]
+      Color: [0.996078432, 0.286274523, 0.286274523, 0.807843149]
       Size: [9, 45, 1]
-      RenderLayer: 5
+      RenderLayer: 10
     Rigidbody2DComponent:
       BodyType: Dynamic
       FixedRotation: false
@@ -454,22 +431,22 @@ Entities:
           categoryBits: 2
           maskBits: 65533
           isSensor: false
-  - Entity: 5004667654791399322
+  - Entity: 4566179642471549864
     TagComponent:
-      Tag: right_upper_arm
+      Tag: left_upper_arm
     ParentComponent:
       Id: 11013301190148018689
     TransformComponent:
       position: [0, 210, 0]
       rotation: [0, -0, 0]
-      scale: [0.999999881, 1, 1]
+      scale: [1, 1, 1]
       localPosition: [0, 210, 0]
       localRotation: [0, -0, 0]
-      localScale: [0.999999881, 1, 1]
+      localScale: [1, 1, 1]
     SpriteRendererComponent:
-      Color: [0.996078432, 0.286274523, 0.286274523, 0.807843149]
+      Color: [0.996078432, 0.286274523, 0.286274523, 0.450980395]
       Size: [9, 45, 1]
-      RenderLayer: 10
+      RenderLayer: 5
     Rigidbody2DComponent:
       BodyType: Dynamic
       FixedRotation: false
@@ -486,117 +463,21 @@ Entities:
           categoryBits: 2
           maskBits: 65533
           isSensor: false
-  - Entity: 9145828424225607664
+  - Entity: 13293471284892532375
     TagComponent:
-      Tag: left_upper_leg
+      Tag: left_lower_arm
     ParentComponent:
-      Id: 16633063266217956886
+      Id: 11013301190148018689
     TransformComponent:
-      position: [0, 147, 0]
-      rotation: [0, -0, 0]
-      scale: [0.999996543, 0.999996424, 1]
-      localPosition: [0, 147, 0]
-      localRotation: [0, -0, 0]
-      localScale: [0.999996543, 0.999996424, 1]
-    SpriteRendererComponent:
-      Color: [0.683076918, 0.683076918, 0.683076918, 0.717647076]
-      Size: [12, 54, 1]
-      RenderLayer: 5
-    Rigidbody2DComponent:
-      BodyType: Dynamic
-      FixedRotation: false
-      GravityScale: 1
-    BoxCollider2DComponent:
-      Shapes:
-        - Offset: [0, 0]
-          Size: [12, 54]
-          Radius: 0.5
-          Density: 1
-          Friction: 0.5
-          Restitution: 0
-          RestitutionThreshold: 0.5
-          categoryBits: 2
-          maskBits: 65533
-          isSensor: false
-  - Entity: 7546683351215964148
-    TagComponent:
-      Tag: left_foot
-    ParentComponent:
-      Id: 16633063266217956886
-    TransformComponent:
-      position: [7.50000477, 62, 0]
-      rotation: [0, -0, 1.57079625]
-      scale: [0.999999523, 0.999999523, 1]
-      localPosition: [7.50000477, 62, 0]
-      localRotation: [0, -0, 1.57079637]
-      localScale: [0.999999583, 0.999999583, 1]
-    SpriteRendererComponent:
-      Color: [0.666666687, 0.666666687, 0.666666687, 0.70588237]
-      Size: [7, 24, 1]
-      RenderLayer: 5
-    Rigidbody2DComponent:
-      BodyType: Dynamic
-      FixedRotation: false
-      GravityScale: 1
-    BoxCollider2DComponent:
-      Shapes:
-        - Offset: [0, 0]
-          Size: [7, 24]
-          Radius: 0.5
-          Density: 1
-          Friction: 1
-          Restitution: 0
-          RestitutionThreshold: 0.5
-          categoryBits: 2
-          maskBits: 65533
-          isSensor: false
-  - Entity: 3434334283518123949
-    TagComponent:
-      Tag: right_lower_leg
-    ParentComponent:
-      Id: 16633063266217956886
-    TransformComponent:
-      position: [0, 95, 0]
+      position: [0, 170, 0]
       rotation: [0, -0, 0]
       scale: [0.99999994, 0.99999994, 1]
-      localPosition: [0, 95, 0]
+      localPosition: [0, 170, 0]
       localRotation: [0, -0, 0]
       localScale: [0.99999994, 0.99999994, 1]
     SpriteRendererComponent:
-      Color: [1, 1, 1, 0.717647076]
-      Size: [9, 58.9000015, 1]
-      RenderLayer: 10
-    Rigidbody2DComponent:
-      BodyType: Dynamic
-      FixedRotation: false
-      GravityScale: 1
-    BoxCollider2DComponent:
-      Shapes:
-        - Offset: [0, 0]
-          Size: [9, 58.9000015]
-          Radius: 0.5
-          Density: 1
-          Friction: 0.5
-          Restitution: 0
-          RestitutionThreshold: 0.5
-          categoryBits: 2
-          maskBits: 65533
-          isSensor: false
-  - Entity: 6720842966022138186
-    TagComponent:
-      Tag: left_lower_leg
-    ParentComponent:
-      Id: 16633063266217956886
-    TransformComponent:
-      position: [0, 95, 0]
-      rotation: [0, -0, 0]
-      scale: [0.999994695, 0.999994695, 1]
-      localPosition: [0, 95, 0]
-      localRotation: [0, -0, 0]
-      localScale: [0.999994695, 0.999994695, 1]
-    SpriteRendererComponent:
-      Color: [0.535384655, 0.535384655, 0.535384655, 0.717647076]
-      Size: [9, 58.9000015, 1]
+      Color: [1, 0.733333349, 0.733333349, 0.356862754]
+      Size: [7, 45, 1]
       RenderLayer: 5
     Rigidbody2DComponent:
       BodyType: Dynamic
@@ -605,7 +486,7 @@ Entities:
     BoxCollider2DComponent:
       Shapes:
         - Offset: [0, 0]
-          Size: [9, 58.9000015]
+          Size: [7, 45]
           Radius: 0.5
           Density: 1
           Friction: 0.5
@@ -614,86 +495,22 @@ Entities:
           categoryBits: 2
           maskBits: 65533
           isSensor: false
-  - Entity: 11990410239272650524
+  - Entity: 5313877712536831436
     TagComponent:
-      Tag: right_foot
-    ParentComponent:
-      Id: 16633063266217956886
-    TransformComponent:
-      position: [7.5, 62, 0]
-      rotation: [0, -0, 1.57079625]
-      scale: [0.999999881, 0.999999881, 1]
-      localPosition: [7.5, 62, 0]
-      localRotation: [0, -0, 1.57079637]
-      localScale: [0.99999994, 0.99999994, 1]
-    SpriteRendererComponent:
-      Color: [1, 1, 1, 0.717647076]
-      Size: [7, 24, 1]
-      RenderLayer: 10
-    Rigidbody2DComponent:
-      BodyType: Dynamic
-      FixedRotation: false
-      GravityScale: 1
-    BoxCollider2DComponent:
-      Shapes:
-        - Offset: [0, 0]
-          Size: [7, 24]
-          Radius: 0.5
-          Density: 1
-          Friction: 1
-          Restitution: 0
-          RestitutionThreshold: 0.5
-          categoryBits: 2
-          maskBits: 65533
-          isSensor: false
-  - Entity: 4032828957078586892
-    TagComponent:
-      Tag: right_upper_leg
-    ParentComponent:
-      Id: 16633063266217956886
-    TransformComponent:
-      position: [0, 147, 0]
-      rotation: [0, -0, 0]
-      scale: [0.99999994, 0.999999762, 1]
-      localPosition: [0, 147, 0]
-      localRotation: [0, -0, 0]
-      localScale: [0.99999994, 0.999999762, 1]
-    SpriteRendererComponent:
-      Color: [1, 1, 1, 0.717647076]
-      Size: [12, 54, 1]
-      RenderLayer: 10
-    Rigidbody2DComponent:
-      BodyType: Dynamic
-      FixedRotation: false
-      GravityScale: 1
-    BoxCollider2DComponent:
-      Shapes:
-        - Offset: [0, 0]
-          Size: [12, 54]
-          Radius: 0.5
-          Density: 1
-          Friction: 0.5
-          Restitution: 0
-          RestitutionThreshold: 0.5
-          categoryBits: 2
-          maskBits: 65533
-          isSensor: false
-  - Entity: 16304959792365445785
-    TagComponent:
-      Tag: body
+      Tag: head
     ParentComponent:
       Id: 12518404902098134090
     TransformComponent:
-      position: [0, 200, 0]
+      position: [0, 245, 0]
       rotation: [0, -0, 0]
       scale: [1, 1, 1]
-      localPosition: [0, 200, 0]
+      localPosition: [0, 245, 0]
       localRotation: [0, -0, 0]
       localScale: [1, 1, 1]
     SpriteRendererComponent:
-      Color: [0.572549045, 0.792156875, 1, 0.70588237]
-      Size: [15, 65, 1]
-      RenderLayer: 6
+      Color: [0.952941179, 0.34117648, 0.360784322, 0.898039222]
+      Size: [14, 21, 1]
+      RenderLayer: 10
     Rigidbody2DComponent:
       BodyType: Dynamic
       FixedRotation: false
@@ -701,157 +518,338 @@ Entities:
     BoxCollider2DComponent:
       Shapes:
         - Offset: [0, 0]
-          Size: [15, 65]
+          Size: [14, 21]
           Radius: 0.5
-          Density: 1.5
+          Density: 1
           Friction: 0.5
           Restitution: 0
           RestitutionThreshold: 0.5
           categoryBits: 2
           maskBits: 65533
           isSensor: false
-  - Entity: 12518404902098134090
+  - Entity: 15665530559552959903
     TagComponent:
-      Tag: Robot
+      Tag: neck
+    ParentComponent:
+      Id: 12518404902098134090
+    TransformComponent:
+      position: [0, 233.499985, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 233.499985, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    RevoluteJoint:
+      idA: 5313877712536831436
+      idB: 16304959792365445785
+      anchor: [0, 0]
+      lowerAngle: 0
+      upperAngle: 0
+      enableLimit: true
+      maxMotorTorque: 0
+      motorSpeed: 0
+      enableMotor: false
+      dampingRatio: 1
+      collideConnected: false
+  - Entity: 16584353549265866901
+    TagComponent:
+      Tag: left_hip
+    ParentComponent:
+      Id: 5725558020934028564
+    TransformComponent:
+      position: [0, 170, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 170, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    RevoluteJoint:
+      idA: 16304959792365445785
+      idB: 9145828424225607664
+      anchor: [0, 0]
+      lowerAngle: -0.69813168
+      upperAngle: 2.53072739
+      enableLimit: true
+      maxMotorTorque: 0
+      motorSpeed: 0
+      enableMotor: true
+      dampingRatio: 1
+      collideConnected: false
+  - Entity: 18145408807326521548
+    TagComponent:
+      Tag: right_hip
+    ParentComponent:
+      Id: 5725558020934028564
+    TransformComponent:
+      position: [0, 170, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 170, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    RevoluteJoint:
+      idA: 16304959792365445785
+      idB: 4032828957078586892
+      anchor: [0, 0]
+      lowerAngle: -0.69813168
+      upperAngle: 2.53072739
+      enableLimit: true
+      maxMotorTorque: 0
+      motorSpeed: 0
+      enableMotor: true
+      dampingRatio: 1
+      collideConnected: false
+  - Entity: 7604253429573710126
+    TagComponent:
+      Tag: left_knee
+    ParentComponent:
+      Id: 5725558020934028564
+    TransformComponent:
+      position: [0, 122, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 122, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    RevoluteJoint:
+      idA: 9145828424225607664
+      idB: 6720842966022138186
+      anchor: [0, 0]
+      lowerAngle: -2.96705961
+      upperAngle: 0
+      enableLimit: true
+      maxMotorTorque: 0
+      motorSpeed: 0
+      enableMotor: true
+      dampingRatio: 1
+      collideConnected: false
+  - Entity: 17316147827019031182
+    TagComponent:
+      Tag: right_knee
+    ParentComponent:
+      Id: 5725558020934028564
+    TransformComponent:
+      position: [0, 122, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 122, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    RevoluteJoint:
+      idA: 4032828957078586892
+      idB: 3434334283518123949
+      anchor: [0, 0]
+      lowerAngle: -2.96705961
+      upperAngle: 0
+      enableLimit: true
+      maxMotorTorque: 0
+      motorSpeed: 0
+      enableMotor: true
+      dampingRatio: 1
+      collideConnected: false
+  - Entity: 7718928546007307161
+    TagComponent:
+      Tag: left_ankle
+    ParentComponent:
+      Id: 5725558020934028564
+    TransformComponent:
+      position: [0, 65.5, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 65.5, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    RevoluteJoint:
+      idA: 6720842966022138186
+      idB: 7546683351215964148
+      anchor: [0, 0]
+      lowerAngle: 0.610865235
+      upperAngle: 2.79252672
+      enableLimit: true
+      maxMotorTorque: 0
+      motorSpeed: 0
+      enableMotor: true
+      dampingRatio: 1
+      collideConnected: false
+  - Entity: 8414672226727352351
+    TagComponent:
+      Tag: right_ankle
+    ParentComponent:
+      Id: 5725558020934028564
+    TransformComponent:
+      position: [0, 65.5, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 65.5, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    RevoluteJoint:
+      idA: 3434334283518123949
+      idB: 11990410239272650524
+      anchor: [0, 0]
+      lowerAngle: 0.610865235
+      upperAngle: 2.79252672
+      enableLimit: true
+      maxMotorTorque: 0
+      motorSpeed: 0
+      enableMotor: true
+      dampingRatio: 1
+      collideConnected: false
+  - Entity: 4586164604264065781
+    TagComponent:
+      Tag: right_shoulder
+    ParentComponent:
+      Id: 5725558020934028564
+    TransformComponent:
+      position: [0, 232.5, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 232.5, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    RevoluteJoint:
+      idA: 16304959792365445785
+      idB: 5004667654791399322
+      anchor: [0, 0]
+      lowerAngle: -0.52359879
+      upperAngle: 2.96705961
+      enableLimit: true
+      maxMotorTorque: 0
+      motorSpeed: 0
+      enableMotor: true
+      dampingRatio: 1
+      collideConnected: false
+  - Entity: 14799756664098478086
+    TagComponent:
+      Tag: right_elbow
+    ParentComponent:
+      Id: 5725558020934028564
+    TransformComponent:
+      position: [0, 190, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 190, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    RevoluteJoint:
+      idA: 5004667654791399322
+      idB: 1321869254889086296
+      anchor: [0, 0]
+      lowerAngle: 0
+      upperAngle: 2.96705961
+      enableLimit: true
+      maxMotorTorque: 0
+      motorSpeed: 0
+      enableMotor: true
+      dampingRatio: 1
+      collideConnected: false
+  - Entity: 6699163262000165994
+    TagComponent:
+      Tag: left_shoulder
+    ParentComponent:
+      Id: 5725558020934028564
+    TransformComponent:
+      position: [0, 232.5, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 232.5, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    RevoluteJoint:
+      idA: 16304959792365445785
+      idB: 4566179642471549864
+      anchor: [0, 0]
+      lowerAngle: -0.52359879
+      upperAngle: 2.96705961
+      enableLimit: true
+      maxMotorTorque: 0
+      motorSpeed: 0
+      enableMotor: true
+      dampingRatio: 1
+      collideConnected: false
+  - Entity: 8706492868070233133
+    TagComponent:
+      Tag: left_elbow
+    ParentComponent:
+      Id: 5725558020934028564
+    TransformComponent:
+      position: [0, 190, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 190, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    RevoluteJoint:
+      idA: 4566179642471549864
+      idB: 13293471284892532375
+      anchor: [0, 0]
+      lowerAngle: 0
+      upperAngle: 2.96705961
+      enableLimit: true
+      maxMotorTorque: 0
+      motorSpeed: 0
+      enableMotor: true
+      dampingRatio: 1
+      collideConnected: false
+  - Entity: 11013301190148018689
+    TagComponent:
+      Tag: arms
+    ParentComponent:
+      Id: 12518404902098134090
     ChildrenComponent:
       Ids:
-        - 16304959792365445785
-        - 5313877712536831436
-        - 15665530559552959903
-        - 11013301190148018689
-        - 5725558020934028564
-        - 16633063266217956886
+        - 13293471284892532375
+        - 4566179642471549864
+        - 1321869254889086296
+        - 5004667654791399322
     TransformComponent:
       position: [0, 0, 0]
-      rotation: [0, 0, 0]
+      rotation: [0, -0, 0]
       scale: [1, 1, 1]
       localPosition: [0, 0, 0]
-      localRotation: [0, 0, 0]
+      localRotation: [0, -0, 0]
       localScale: [1, 1, 1]
-    ScriptComponent:
-      scriptPath: Brain.cpp
-    AgentComponent:
-      mode: Inference
-      model_path: /Users/shuai/CLionProjects/Beast/Projects/Humanoid/Assets/Models/cat_traced_model.pt
-  - Entity: 2980125013936406836
+  - Entity: 5725558020934028564
     TagComponent:
-      Tag: box
+      Tag: joints
+    ParentComponent:
+      Id: 12518404902098134090
+    ChildrenComponent:
+      Ids:
+        - 8706492868070233133
+        - 6699163262000165994
+        - 14799756664098478086
+        - 4586164604264065781
+        - 8414672226727352351
+        - 7718928546007307161
+        - 17316147827019031182
+        - 7604253429573710126
+        - 18145408807326521548
+        - 16584353549265866901
     TransformComponent:
-      position: [-450.500519, 100, 0]
-      rotation: [0, 0, 0]
+      position: [0, 0, 0]
+      rotation: [0, -0, 0]
       scale: [1, 1, 1]
-      localPosition: [-450.500519, 100, 0]
-      localRotation: [0, 0, 0]
+      localPosition: [0, 0, 0]
+      localRotation: [0, -0, 0]
       localScale: [1, 1, 1]
-    SpriteRendererComponent:
-      Color: [0.753846169, 0.241230771, 0.241230771, 1]
-      Size: [100, 100, 1]
-      RenderLayer: 2
-    Rigidbody2DComponent:
-      BodyType: Dynamic
-      FixedRotation: false
-      GravityScale: 1
-    BoxCollider2DComponent:
-      Shapes:
-        - Offset: [0, 0]
-          Size: [100, 100]
-          Radius: 0.5
-          Density: 1
-          Friction: 0.5
-          Restitution: 0
-          RestitutionThreshold: 0.5
-          categoryBits: 1
-          maskBits: 65535
-          isSensor: false
-  - Entity: 16140779475400854577
+  - Entity: 16633063266217956886
     TagComponent:
-      Tag: Craft
+      Tag: legs
+    ParentComponent:
+      Id: 12518404902098134090
+    ChildrenComponent:
+      Ids:
+        - 9145828424225607664
+        - 3434334283518123949
+        - 6720842966022138186
+        - 4032828957078586892
+        - 7546683351215964148
+        - 11990410239272650524
     TransformComponent:
-      position: [-216.497986, 119.750122, 0]
-      rotation: [0, 0, 0]
-      scale: [0.239999995, 0.219999999, 1]
-      localPosition: [-216.497986, 119.750122, 0]
-      localRotation: [0, 0, 0]
-      localScale: [0.239999995, 0.219999999, 1]
-    SpriteRendererComponent:
-      Color: [1, 1, 1, 1]
-      Size: [956, 1564, 1]
-      RenderLayer: 2
-  - Entity: 9958375328014660809
-    TagComponent:
-      Tag: Main Camera
-    TransformComponent:
-      position: [0, 400, 1]
-      rotation: [0, 0, 0]
+      position: [0, 0, 0]
+      rotation: [0, -0, 0]
       scale: [1, 1, 1]
-      localPosition: [0, 400, 1]
-      localRotation: [0, 0, 0]
+      localPosition: [0, 0, 0]
+      localRotation: [0, -0, 0]
       localScale: [1, 1, 1]
-    CameraComponent:
-      Camera:
-        ProjectionType: 0
-        OrthographicSize: 10
-        OrthographicNear: -1
-        OrthographicFar: 1
-      Primary: true
-      FixedAspectRatio: false
-  - Entity: 13161537779091593687
-    TagComponent:
-      Tag: Ground
-    TransformComponent:
-      position: [9000, 0, 0]
-      rotation: [0, 0, 0]
-      scale: [1, 1, 1]
-      localPosition: [9000, 0, 0]
-      localRotation: [0, 0, 0]
-      localScale: [1, 1, 1]
-    SpriteRendererComponent:
-      Color: [0.603076935, 0.603076935, 0.603076935, 1]
-      Size: [20000, 100, 1]
-      RenderLayer: 0
-    Rigidbody2DComponent:
-      BodyType: Static
-      FixedRotation: false
-      GravityScale: 1
-    BoxCollider2DComponent:
-      Shapes:
-        - Offset: [0, 0]
-          Size: [20000, 100]
-          Radius: 0.5
-          Density: 1
-          Friction: 1
-          Restitution: 0
-          RestitutionThreshold: 0.5
-          categoryBits: 1
-          maskBits: 65535
-          isSensor: false
-  - Entity: 11962727047548841414
-    TagComponent:
-      Tag: Background1
-    TransformComponent:
-      position: [0, 348.749939, 0]
-      rotation: [0, 0, 0]
-      scale: [1.25, 1.25, 1]
-      localPosition: [0, 348.749939, 0]
-      localRotation: [0, 0, 0]
-      localScale: [1.25, 1.25, 1]
-    SpriteRendererComponent:
-      Color: [1, 1, 1, 1]
-      Size: [1280, 800, 1]
-      TexturePath: /Users/shuai/CLionProjects/Beast/Projects/Humanoid/Assets/Textures/grid.png
-      RenderLayer: 0
-  - Entity: 17489410220557255579
-    TagComponent:
-      Tag: Background2
-    TransformComponent:
-      position: [1600, 348.749939, 0]
-      rotation: [0, 0, 0]
-      scale: [1.25, 1.25, 1]
-      localPosition: [1600, 348.749939, 0]
-      localRotation: [0, 0, 0]
-      localScale: [1.25, 1.25, 1]
-    SpriteRendererComponent:
-      Color: [1, 1, 1, 1]
-      Size: [1280, 800, 1]
-      TexturePath: /Users/shuai/CLionProjects/Beast/Projects/Humanoid/Assets/Textures/grid.png
-      RenderLayer: 0
