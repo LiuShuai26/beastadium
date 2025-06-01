@@ -17,8 +17,8 @@ register(
 
 register(
     id="SimpleCat",
-    entry_point="beastadium.cat_env.cat_env:CatEnv",
-    max_episode_steps=3000,
+    entry_point="beastadium.simplecat_env.cat_env:SimpleCat",
+    max_episode_steps=300,
     reward_threshold=100,
 )
 

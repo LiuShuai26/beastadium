@@ -1,14 +1,14 @@
-import beastadium.cat_env.simple_cat as simple_cat
+import beastadium.simplecat_env.SimpleCatEnv as SimpleCatEnv
 import gymnasium as gym
 from gymnasium import spaces
 import numpy as np
 from typing import List, Optional
 
 
-class CatEnv(gym.Env):
+class SimpleCat(gym.Env):
     def __init__(self, render_mode: Optional[str] = None):
-        super(CatEnv, self).__init__()
-        self.env = simple_cat.SimpleCat("beastadium/cat_env/SimpleCat.project")
+        super(SimpleCat, self).__init__()
+        self.env = SimpleCatEnv.SimpleCatEnv("beastadium/simplecat_env/SimpleCat.project")
 
         # Define action and observation space
         self.action_space = spaces.Box(
@@ -17,14 +17,14 @@ class CatEnv(gym.Env):
         )
         low = np.array(
             [
-                -10.0,
-                -10.0,
-                -10.0,])
+                -20.0,
+                -20.0,
+                -20.0,])
         high = np.array(
             [
-                10.0,
-                10.0,
-                10.0,])
+                20.0,
+                20.0,
+                20.0,])
 
         self.observation_space = spaces.Box(low, high)
 

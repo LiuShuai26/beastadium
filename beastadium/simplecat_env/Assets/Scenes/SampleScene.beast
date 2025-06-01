@@ -1,0 +1,119 @@
+Scene: Untitled
+Entities:
+  - Entity: 3263133047932792314
+    TagComponent:
+      Tag: Main Camera
+    TransformComponent:
+      position: [0, 0, 1]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 0, 1]
+      localRotation: [0, 0, 0]
+      localScale: [1, 1, 1]
+    CameraComponent:
+      Camera:
+        ProjectionType: 0
+        OrthographicSize: 10
+        OrthographicNear: -1
+        OrthographicFar: 1
+      Primary: true
+      FixedAspectRatio: false
+  - Entity: 7093703257274223924
+    TagComponent:
+      Tag: Ground
+    TransformComponent:
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 0, 0]
+      localRotation: [0, 0, 0]
+      localScale: [1, 1, 1]
+    SpriteRendererComponent:
+      Color: [0.504615426, 0.38969928, 0.327611864, 1]
+      Size: [1000, 100, 1]
+      RenderLayer: 0
+    Rigidbody2DComponent:
+      BodyType: Static
+      FixedRotation: false
+      GravityScale: 1
+    BoxCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [1000, 100]
+          Radius: 0.5
+          Density: 1
+          Friction: 0.100000001
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 1
+          maskBits: 65535
+          isSensor: false
+  - Entity: 12371255316453805542
+    TagComponent:
+      Tag: Cat
+    TransformComponent:
+      position: [0, 120, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 120, 0]
+      localRotation: [0, 0, 0]
+      localScale: [1, 1, 1]
+    SpriteRendererComponent:
+      Color: [0.950769246, 0.511952698, 0.511952698, 1]
+      Size: [100, 100, 1]
+      RenderLayer: 0
+    Rigidbody2DComponent:
+      BodyType: Dynamic
+      FixedRotation: false
+      GravityScale: 1
+    BoxCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [100, 100]
+          Radius: 0.5
+          Density: 1
+          Friction: 0.5
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 1
+          maskBits: 65535
+          isSensor: false
+    ScriptComponent:
+      scriptPath: CatAgent.cpp
+    AgentComponent:
+      mode: Inference
+      model_path: /Users/shuai/CLionProjects/Beast/TemplateProjects/SimpleCat/Assets/Models/cat_traced_model.pt
+  - Entity: 13146911699931095854
+    TagComponent:
+      Tag: Food
+    TransformComponent:
+      position: [-284.999847, 100, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      localPosition: [-284.999847, 100, 0]
+      localRotation: [0, 0, 0]
+      localScale: [1, 1, 1]
+    CircleRendererComponent:
+      Color: [0.661538482, 0.639642715, 0.287005931, 1]
+      Radius: 10
+      Thickness: 1
+      Fade: 0.00499999989
+      RenderLayer: 0
+    Rigidbody2DComponent:
+      BodyType: Kinematic
+      FixedRotation: false
+      GravityScale: 1
+    CircleCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [10, 10]
+          Radius: 10
+          Density: 1
+          Friction: 0.5
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 1
+          maskBits: 65535
+          isSensor: false
+    ScriptComponent:
+      scriptPath: Food.cpp

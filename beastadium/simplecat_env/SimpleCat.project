@@ -1,0 +1,6 @@
+Project:
+  Name: SimpleCat
+  StartScene: /Users/shuai/CLionProjects/Beast/TemplateProjects/SimpleCat/Assets/Scenes/SampleScene.beast
+  AssetDirectory: Assets
+  ScriptPath: Assets/Scripts
+  ScenePath: ""

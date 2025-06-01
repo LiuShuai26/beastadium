@@ -1,6 +1,0 @@
-Project:
-  Name: SimpleCat
-  StartScene: SampleScene.beast
-  AssetDirectory: "Assets"
-  ScriptPath: "Assets/Scripts"
-  ScenePath: "Assets/Scenes"
