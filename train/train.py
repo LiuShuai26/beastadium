@@ -24,11 +24,9 @@ def make_gym_env_func(
 
 
 def register_custom_components():
-    register_env("StarEnv", make_gym_env_func)
-    register_env("IronEnv", make_gym_env_func)
-    register_env("ShipEnv", make_gym_env_func)
     register_env("SimpleCat", make_gym_env_func)
     register_env("HumanoidE", make_gym_env_func)
+    register_env("ROM", make_gym_env_func)
 
 
 def parse_custom_args(argv=None, evaluation=False):

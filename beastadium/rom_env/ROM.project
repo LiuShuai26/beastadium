@@ -1,0 +1,6 @@
+Project:
+  Name: ROM
+  StartScene: Assets/Scenes/SampleScene.beast
+  AssetDirectory: Assets
+  ScriptPath: Assets/Scripts
+  ScenePath: ""
