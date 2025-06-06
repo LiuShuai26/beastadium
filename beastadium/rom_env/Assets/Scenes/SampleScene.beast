@@ -1,10 +1,32 @@
 Scene: Untitled
 Entities:
-  - Entity: 8718624913275994408
+  - Entity: 8080484134926960168
     TagComponent:
-      Tag: leftDistance
+      Tag: rightPrismatic
     ParentComponent:
-      Id: 8573054527041411975
+      Id: 14810947074876528042
+    TransformComponent:
+      position: [0, 100, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 100, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    PrismaticJoint:
+      idA: 4693926817478951775
+      idB: 17664533436291297119
+      enableLimit: false
+      lowerTranslation: -1
+      upperTranslation: 1
+      enableSpring: true
+      hertz: 10
+      dampingRatio: 0
+      collideConnected: false
+  - Entity: 13760031248274630071
+    TagComponent:
+      Tag: rightDistance
+    ParentComponent:
+      Id: 14810947074876528042
     TransformComponent:
       position: [0, 0, 0]
       rotation: [0, -0, 0]
@@ -13,20 +35,20 @@ Entities:
       localRotation: [0, -0, 0]
       localScale: [1, 1, 1]
     DistanceJoint:
-      idA: 816803282067337591
-      idB: 12943625811025691271
+      idA: 4693926817478951775
+      idB: 17664533436291297119
       anchor: [0, 0]
       length: 0.100000001
       minLength: -1
       maxLength: 1
-      frequencyHz: 5
+      frequencyHz: 10
       dampingRatio: 0
       collideConnected: false
-  - Entity: 4709740230638209250
+  - Entity: 17167863840171731560
     TagComponent:
-      Tag: leftRevolute
+      Tag: rightRevolute
     ParentComponent:
-      Id: 8573054527041411975
+      Id: 14810947074876528042
     TransformComponent:
       position: [0, 100, 0]
       rotation: [0, -0, 0]
@@ -36,7 +58,7 @@ Entities:
       localScale: [1, 1, 1]
     RevoluteJoint:
       idA: 11722998164263684505
-      idB: 816803282067337591
+      idB: 4693926817478951775
       anchor: [0, 0]
       lowerAngle: -1.04719758
       upperAngle: 1.04719758
@@ -46,11 +68,43 @@ Entities:
       enableMotor: true
       dampingRatio: 1
       collideConnected: false
-  - Entity: 11722998164263684505
+  - Entity: 17664533436291297119
     TagComponent:
-      Tag: body
+      Tag: rightfoot
     ParentComponent:
-      Id: 2136419786732584852
+      Id: 14810947074876528042
+    TransformComponent:
+      position: [0, 0, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 0, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    SpriteRendererComponent:
+      Color: [0.590769231, 0.234489933, 0.234489933, 1]
+      Size: [20, 20, 1]
+      RenderLayer: 0
+    Rigidbody2DComponent:
+      BodyType: Dynamic
+      FixedRotation: false
+      GravityScale: 1
+    CircleCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [20, 20]
+          Radius: 10
+          Density: 1
+          Friction: 1
+          Restitution: 0.5
+          RestitutionThreshold: 0.5
+          categoryBits: 2
+          maskBits: 65533
+          isSensor: false
+  - Entity: 4693926817478951775
+    TagComponent:
+      Tag: righthip
+    ParentComponent:
+      Id: 14810947074876528042
     TransformComponent:
       position: [0, 100, 0]
       rotation: [0, -0, 0]
@@ -59,9 +113,9 @@ Entities:
       localRotation: [0, -0, 0]
       localScale: [1, 1, 1]
     SpriteRendererComponent:
-      Color: [0.901538491, 0.454930216, 0.454930216, 1]
-      Size: [60, 60, 1]
-      RenderLayer: 0
+      Color: [0.207072154, 0.498461545, 0.121164501, 1]
+      Size: [30, 30, 1]
+      RenderLayer: 10
     Rigidbody2DComponent:
       BodyType: Dynamic
       FixedRotation: false
@@ -69,7 +123,167 @@ Entities:
     BoxCollider2DComponent:
       Shapes:
         - Offset: [0, 0]
-          Size: [60, 60]
+          Size: [30, 30]
+          Radius: 50
+          Density: 1
+          Friction: 0.5
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 2
+          maskBits: 65533
+          isSensor: false
+  - Entity: 14810947074876528042
+    TagComponent:
+      Tag: Right
+    ParentComponent:
+      Id: 2136419786732584852
+    ChildrenComponent:
+      Ids:
+        - 4693926817478951775
+        - 17664533436291297119
+        - 17167863840171731560
+        - 13760031248274630071
+        - 8080484134926960168
+    TransformComponent:
+      position: [0, 0, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 0, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+  - Entity: 8573054527041411975
+    TagComponent:
+      Tag: Left
+    ParentComponent:
+      Id: 2136419786732584852
+    ChildrenComponent:
+      Ids:
+        - 12254164943990763933
+        - 8718624913275994408
+        - 4709740230638209250
+        - 12943625811025691271
+        - 816803282067337591
+    TransformComponent:
+      position: [0, 0, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 0, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+  - Entity: 2136419786732584852
+    TagComponent:
+      Tag: ROM
+    ChildrenComponent:
+      Ids:
+        - 11722998164263684505
+        - 8573054527041411975
+        - 14810947074876528042
+    TransformComponent:
+      position: [0, 0, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 0, 0]
+      localRotation: [0, 0, 0]
+      localScale: [1, 1, 1]
+    ScriptComponent:
+      scriptPath: ROMAgent.cpp
+    AgentComponent:
+      mode: Heuristic
+      model_path: /Users/shuai/CLionProjects/Beast/Projects/ROM/Assets/Models/cat_traced_model.pt
+  - Entity: 12254164943990763933
+    TagComponent:
+      Tag: leftPrismatic
+    ParentComponent:
+      Id: 8573054527041411975
+    TransformComponent:
+      position: [0, 100, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 100, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    PrismaticJoint:
+      idA: 816803282067337591
+      idB: 12943625811025691271
+      enableLimit: false
+      lowerTranslation: -1
+      upperTranslation: 1
+      enableSpring: true
+      hertz: 10
+      dampingRatio: 0
+      collideConnected: false
+  - Entity: 5746586121418759975
+    TagComponent:
+      Tag: Main Camera
+    TransformComponent:
+      position: [0, 0, 1]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 0, 1]
+      localRotation: [0, 0, 0]
+      localScale: [1, 1, 1]
+    CameraComponent:
+      Camera:
+        ProjectionType: 0
+        OrthographicSize: 10
+        OrthographicNear: -1
+        OrthographicFar: 1
+      Primary: true
+      FixedAspectRatio: false
+  - Entity: 3371754016357558479
+    TagComponent:
+      Tag: Ground
+    TransformComponent:
+      position: [9000, -202.499985, 0]
+      rotation: [0, 0, 0]
+      scale: [1, 1, 1]
+      localPosition: [9000, -202.499985, 0]
+      localRotation: [0, 0, 0]
+      localScale: [1, 1, 1]
+    SpriteRendererComponent:
+      Color: [0.670769215, 0.545753717, 0.460250914, 1]
+      Size: [20000, 100, 1]
+      RenderLayer: 0
+    Rigidbody2DComponent:
+      BodyType: Static
+      FixedRotation: false
+      GravityScale: 1
+    BoxCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [20000, 100]
+          Radius: 50
+          Density: 1
+          Friction: 1
+          Restitution: 0
+          RestitutionThreshold: 0.5
+          categoryBits: 1
+          maskBits: 65535
+          isSensor: false
+  - Entity: 816803282067337591
+    TagComponent:
+      Tag: lefthip
+    ParentComponent:
+      Id: 8573054527041411975
+    TransformComponent:
+      position: [0, 100, 0]
+      rotation: [0, -0, 0]
+      scale: [1, 1, 1]
+      localPosition: [0, 100, 0]
+      localRotation: [0, -0, 0]
+      localScale: [1, 1, 1]
+    SpriteRendererComponent:
+      Color: [0.384846926, 0.910769224, 0.2297941, 1]
+      Size: [30, 30, 1]
+      RenderLayer: 10
+    Rigidbody2DComponent:
+      BodyType: Dynamic
+      FixedRotation: false
+      GravityScale: 1
+    BoxCollider2DComponent:
+      Shapes:
+        - Offset: [0, 0]
+          Size: [30, 30]
           Radius: 50
           Density: 1
           Friction: 0.5
@@ -110,11 +324,11 @@ Entities:
           categoryBits: 2
           maskBits: 65533
           isSensor: false
-  - Entity: 816803282067337591
+  - Entity: 11722998164263684505
     TagComponent:
-      Tag: lefthip
+      Tag: body
     ParentComponent:
-      Id: 8573054527041411975
+      Id: 2136419786732584852
     TransformComponent:
       position: [0, 100, 0]
       rotation: [0, -0, 0]
@@ -123,17 +337,17 @@ Entities:
       localRotation: [0, -0, 0]
       localScale: [1, 1, 1]
     SpriteRendererComponent:
-      Color: [0.384846926, 0.910769224, 0.2297941, 1]
-      Size: [30, 30, 1]
-      RenderLayer: 10
+      Color: [0.901538491, 0.454930216, 0.454930216, 1]
+      Size: [60, 60, 1]
+      RenderLayer: 0
     Rigidbody2DComponent:
       BodyType: Dynamic
-      FixedRotation: false
+      FixedRotation: true
       GravityScale: 1
     BoxCollider2DComponent:
       Shapes:
         - Offset: [0, 0]
-          Size: [30, 30]
+          Size: [60, 60]
           Radius: 50
           Density: 1
           Friction: 0.5
@@ -142,203 +356,11 @@ Entities:
           categoryBits: 2
           maskBits: 65533
           isSensor: false
-  - Entity: 3371754016357558479
+  - Entity: 4709740230638209250
     TagComponent:
-      Tag: Ground
-    TransformComponent:
-      position: [9000, -202.499985, 0]
-      rotation: [0, 0, 0]
-      scale: [1, 1, 1]
-      localPosition: [9000, -202.499985, 0]
-      localRotation: [0, 0, 0]
-      localScale: [1, 1, 1]
-    SpriteRendererComponent:
-      Color: [0.670769215, 0.545753717, 0.460250914, 1]
-      Size: [20000, 100, 1]
-      RenderLayer: 0
-    Rigidbody2DComponent:
-      BodyType: Static
-      FixedRotation: false
-      GravityScale: 1
-    BoxCollider2DComponent:
-      Shapes:
-        - Offset: [0, 0]
-          Size: [20000, 100]
-          Radius: 50
-          Density: 1
-          Friction: 1
-          Restitution: 0
-          RestitutionThreshold: 0.5
-          categoryBits: 1
-          maskBits: 65535
-          isSensor: false
-  - Entity: 5746586121418759975
-    TagComponent:
-      Tag: Main Camera
-    TransformComponent:
-      position: [0, 0, 1]
-      rotation: [0, 0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 0, 1]
-      localRotation: [0, 0, 0]
-      localScale: [1, 1, 1]
-    CameraComponent:
-      Camera:
-        ProjectionType: 0
-        OrthographicSize: 10
-        OrthographicNear: -1
-        OrthographicFar: 1
-      Primary: true
-      FixedAspectRatio: false
-  - Entity: 12254164943990763933
-    TagComponent:
-      Tag: leftPrismatic
+      Tag: leftRevolute
     ParentComponent:
       Id: 8573054527041411975
-    TransformComponent:
-      position: [0, 100, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 100, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    PrismaticJoint:
-      idA: 816803282067337591
-      idB: 12943625811025691271
-      enableLimit: false
-      lowerTranslation: -1
-      upperTranslation: 1
-      enableSpring: true
-      hertz: 5
-      dampingRatio: 0
-      collideConnected: false
-  - Entity: 2136419786732584852
-    TagComponent:
-      Tag: ROM
-    ChildrenComponent:
-      Ids:
-        - 11722998164263684505
-        - 8573054527041411975
-        - 14810947074876528042
-    TransformComponent:
-      position: [0, 0, 0]
-      rotation: [0, 0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 0, 0]
-      localRotation: [0, 0, 0]
-      localScale: [1, 1, 1]
-    ScriptComponent:
-      scriptPath: ROMAgent.cpp
-    AgentComponent:
-      mode: Inference
-      model_path: /Users/shuai/CLionProjects/Beast/Projects/ROM/Assets/Models/cat_traced_model.pt
-  - Entity: 8573054527041411975
-    TagComponent:
-      Tag: Left
-    ParentComponent:
-      Id: 2136419786732584852
-    ChildrenComponent:
-      Ids:
-        - 12254164943990763933
-        - 8718624913275994408
-        - 4709740230638209250
-        - 12943625811025691271
-        - 816803282067337591
-    TransformComponent:
-      position: [0, 0, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 0, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-  - Entity: 14810947074876528042
-    TagComponent:
-      Tag: Right
-    ParentComponent:
-      Id: 2136419786732584852
-    ChildrenComponent:
-      Ids:
-        - 4693926817478951775
-        - 17664533436291297119
-        - 17167863840171731560
-        - 13760031248274630071
-        - 8080484134926960168
-    TransformComponent:
-      position: [0, 0, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 0, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-  - Entity: 4693926817478951775
-    TagComponent:
-      Tag: righthip
-    ParentComponent:
-      Id: 14810947074876528042
-    TransformComponent:
-      position: [0, 100, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 100, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    SpriteRendererComponent:
-      Color: [0.207072154, 0.498461545, 0.121164501, 1]
-      Size: [30, 30, 1]
-      RenderLayer: 10
-    Rigidbody2DComponent:
-      BodyType: Dynamic
-      FixedRotation: false
-      GravityScale: 1
-    BoxCollider2DComponent:
-      Shapes:
-        - Offset: [0, 0]
-          Size: [30, 30]
-          Radius: 50
-          Density: 1
-          Friction: 0.5
-          Restitution: 0
-          RestitutionThreshold: 0.5
-          categoryBits: 2
-          maskBits: 65533
-          isSensor: false
-  - Entity: 17664533436291297119
-    TagComponent:
-      Tag: rightfoot
-    ParentComponent:
-      Id: 14810947074876528042
-    TransformComponent:
-      position: [0, 0, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 0, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    SpriteRendererComponent:
-      Color: [0.590769231, 0.234489933, 0.234489933, 1]
-      Size: [20, 20, 1]
-      RenderLayer: 0
-    Rigidbody2DComponent:
-      BodyType: Dynamic
-      FixedRotation: false
-      GravityScale: 1
-    CircleCollider2DComponent:
-      Shapes:
-        - Offset: [0, 0]
-          Size: [20, 20]
-          Radius: 10
-          Density: 1
-          Friction: 1
-          Restitution: 0.5
-          RestitutionThreshold: 0.5
-          categoryBits: 2
-          maskBits: 65533
-          isSensor: false
-  - Entity: 17167863840171731560
-    TagComponent:
-      Tag: rightRevolute
-    ParentComponent:
-      Id: 14810947074876528042
     TransformComponent:
       position: [0, 100, 0]
       rotation: [0, -0, 0]
@@ -348,7 +370,7 @@ Entities:
       localScale: [1, 1, 1]
     RevoluteJoint:
       idA: 11722998164263684505
-      idB: 4693926817478951775
+      idB: 816803282067337591
       anchor: [0, 0]
       lowerAngle: -1.04719758
       upperAngle: 1.04719758
@@ -358,11 +380,11 @@ Entities:
       enableMotor: true
       dampingRatio: 1
       collideConnected: false
-  - Entity: 13760031248274630071
+  - Entity: 8718624913275994408
     TagComponent:
-      Tag: rightDistance
+      Tag: leftDistance
     ParentComponent:
-      Id: 14810947074876528042
+      Id: 8573054527041411975
     TransformComponent:
       position: [0, 0, 0]
       rotation: [0, -0, 0]
@@ -371,34 +393,12 @@ Entities:
       localRotation: [0, -0, 0]
       localScale: [1, 1, 1]
     DistanceJoint:
-      idA: 4693926817478951775
-      idB: 17664533436291297119
+      idA: 816803282067337591
+      idB: 12943625811025691271
       anchor: [0, 0]
       length: 0.100000001
       minLength: -1
       maxLength: 1
-      frequencyHz: 5
-      dampingRatio: 0
-      collideConnected: false
-  - Entity: 8080484134926960168
-    TagComponent:
-      Tag: rightPrismatic
-    ParentComponent:
-      Id: 14810947074876528042
-    TransformComponent:
-      position: [0, 100, 0]
-      rotation: [0, -0, 0]
-      scale: [1, 1, 1]
-      localPosition: [0, 100, 0]
-      localRotation: [0, -0, 0]
-      localScale: [1, 1, 1]
-    PrismaticJoint:
-      idA: 4693926817478951775
-      idB: 17664533436291297119
-      enableLimit: false
-      lowerTranslation: -1
-      upperTranslation: 1
-      enableSpring: true
-      hertz: 5
+      frequencyHz: 10
       dampingRatio: 0
       collideConnected: false
